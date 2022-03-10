@@ -58,6 +58,3 @@ variable "dbname" {
 variable "type" {
   type = string
 }
-# variable "tags" {
-  
-# }

@@ -16,8 +16,6 @@ module "azure_rg_module" {
   source                  = "./modules/azure_rg"
   azurerm_resource_group  = var.azurerm_resource_group
   location_resource_group = var.location_resource_group
-  #tags                    = var.tags
-
 }
 
 module "sql_database_module" {
@@ -33,7 +31,6 @@ module "sql_database_module" {
   sql_name                     = var.sql_name
   sql_version                  = var.sql_version
   administrator_login          = var.administrator_login
-  #administrator_login_password = var.administrator_login_password
   dbname                         = var.dbname
 
 }  
@@ -49,7 +46,6 @@ module "app_service" {
   size_service_plan         = var.size_service_plan
   my_service_plan_name      = var.my_service_plan_name
   my_app_service_name       = var.my_app_service_name
-  #app_service_plan_id       = var.app_service_plan_id
   dotnet_framework_version  = var.dotnet_framework_version
   scm_type                  = var.scm_type
   type                      = var.type
