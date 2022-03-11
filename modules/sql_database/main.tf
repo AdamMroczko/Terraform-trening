@@ -20,10 +20,10 @@ resource "azurerm_storage_account" "my_sql_storage" {
 
 
 resource "azurerm_sql_database" "database1" {
-  name                  = var.dbname
-  resource_group_name   = var.azurerm_resource_group
-  location              = var.location_resource_group
-  server_name           = azurerm_sql_server.sql.name
+  name                = var.dbname
+  resource_group_name = var.azurerm_resource_group
+  location            = var.location_resource_group
+  server_name         = azurerm_sql_server.sql.name
 
   extended_auditing_policy {
     storage_endpoint                        = azurerm_storage_account.my_sql_storage.primary_blob_endpoint
@@ -31,7 +31,7 @@ resource "azurerm_sql_database" "database1" {
     storage_account_access_key_is_secondary = true
     retention_in_days                       = 6
   }
-}  
+}
 
 resource "random_password" "password-sql" {
 
@@ -49,11 +49,11 @@ resource "random_password" "password-sql" {
 data "azurerm_client_config" "current" {}
 
 resource "azurerm_key_vault" "key_vaultsql" {
-  name                       = "my-key-vault-sql"
-  location                   = var.location_resource_group
-  resource_group_name        = var.azurerm_resource_group
-  tenant_id                  = data.azurerm_client_config.current.tenant_id
-  sku_name                   = "premium"
+  name                = "my-key-vault-sql"
+  location            = var.location_resource_group
+  resource_group_name = var.azurerm_resource_group
+  tenant_id           = data.azurerm_client_config.current.tenant_id
+  sku_name            = "premium"
   #soft_delete_retention_days = 7
 
   access_policy {

@@ -6,14 +6,14 @@ variable "location_resource_group" {
 }
 
 variable "storage_name" {
-  
+
 }
 variable "account_tier" {
-  
+
 }
 
 variable "account_replication_type" {
-  
+
 }
 
 variable "sql_version" {
@@ -27,9 +27,5 @@ variable "dbname" {
 }
 
 variable "administrator_login" {
-  
-}
 
-# variable "administrator_login_password" {
-  
-# }
+}

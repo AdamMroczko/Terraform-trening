@@ -21,7 +21,7 @@ resource "azurerm_app_service" "app_service" {
   }
 
   #app_settings = {
-   # "SOME_KEY" = "some-value"
+  # "SOME_KEY" = "some-value"
   #}
 
   connection_string {

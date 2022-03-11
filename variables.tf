@@ -9,14 +9,14 @@ variable "location_resource_group" {
 
 
 variable "storage_name" {
-  
+
 }
 variable "account_tier" {
-  
+
 }
 
 variable "account_replication_type" {
-  
+
 }
 variable "sql_name" {
   type = string
@@ -27,7 +27,7 @@ variable "sql_version" {
 }
 
 variable "administrator_login" {
-  
+
 }
 
 
@@ -35,7 +35,7 @@ variable "my_service_plan_name" {
   type = string
 }
 variable "tier" {
-  
+
 }
 variable "size_service_plan" {
   type = string
@@ -47,7 +47,7 @@ variable "my_app_service_name" {
 }
 
 variable "dotnet_framework_version" {
-  
+
 }
 variable "scm_type" {
   type = string
