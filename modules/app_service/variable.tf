@@ -1,16 +1,18 @@
+#the name of the App Service
 variable "name" {
   type = string
 }
-
+# Name of RG
 variable "azurerm_resource_group" {
   description = "The name of the resource group in which the resources will be created."
 
 }
-
+#Location of RG
 variable "location_resource_group" {
   description = "The location in which the resources will be created."
 }
 
+# Name of you app service plan
 variable "my_service_plan_name" {
   type = string
 }

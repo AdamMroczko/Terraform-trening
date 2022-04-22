@@ -5,10 +5,6 @@ provider "azurerm" {
 
 terraform {
   backend "azurerm" {
-    storage_account_name = "tfstate852375425"
-    container_name       = "adotfstate"
-    key                  = "key2"
-    sas_token            = "sp=racwdli&st=2022-03-08T13:44:49Z&se=2023-03-08T21:44:49Z&spr=https&sv=2020-08-04&sr=c&sig=XUdgRGi1vVIPGMMC%2BsseTQ%2Fh1fFWg2e6RZGHyzkOQgM%3D"
   }
 }
 
@@ -16,6 +12,7 @@ module "azure_rg_module" {
   source                  = "./modules/azure_rg"
   azurerm_resource_group  = var.azurerm_resource_group
   location_resource_group = var.location_resource_group
+
 }
 
 module "sql_database_module" {
@@ -50,4 +47,5 @@ module "app_service" {
   scm_type                 = var.scm_type
   type                     = var.type
   dbname                   = var.dbname
+
 }

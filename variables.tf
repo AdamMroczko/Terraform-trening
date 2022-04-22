@@ -6,6 +6,10 @@ variable "azurerm_resource_group" {
 variable "location_resource_group" {
   description = "The location in which the resources will be created."
 }
+variable "tags_resource_group" {
+  description = "Tags for RG "
+  
+}
 
 
 variable "storage_name" {

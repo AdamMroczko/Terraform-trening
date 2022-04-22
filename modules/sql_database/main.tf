@@ -70,7 +70,8 @@ resource "azurerm_key_vault" "key_vaultsql" {
       "get",
       "delete",
       "purge",
-      "recover"
+      "recover",
+      "list"
     ]
   }
 }
