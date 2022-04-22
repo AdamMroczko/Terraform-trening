@@ -12,7 +12,7 @@ module "azure_rg_module" {
   source                  = "./modules/azure_rg"
   azurerm_resource_group  = var.azurerm_resource_group
   location_resource_group = var.location_resource_group
-
+  tags_resource_group     = var.tags_resource_group
 }
 
 module "sql_database_module" {
