@@ -9,6 +9,10 @@ variable "location_resource_group" {
 variable "tags_resource_group" {
   description = "Tags for RG "
 }
+
+variable "tags_sql" {
+  description = "Tags for SQL "
+}
 variable "storage_name" {
 
 }
@@ -30,7 +34,9 @@ variable "sql_version" {
 variable "administrator_login" {
 
 }
-
+variable "key_vault_name" {
+  type = string
+}
 
 variable "my_service_plan_name" {
   type = string

@@ -25,6 +25,7 @@ resource "azurerm_sql_database" "database1" {
   location            = var.location_resource_group
   server_name         = azurerm_sql_server.sql.name
 
+
   extended_auditing_policy {
     storage_endpoint                        = azurerm_storage_account.my_sql_storage.primary_blob_endpoint
     storage_account_access_key              = azurerm_storage_account.my_sql_storage.primary_access_key
@@ -49,7 +50,7 @@ resource "random_password" "password-sql" {
 data "azurerm_client_config" "current" {}
 
 resource "azurerm_key_vault" "key_vaultsql" {
-  name                = "my-key-vault-sql"
+  name                = var.key_vault_name
   location            = var.location_resource_group
   resource_group_name = var.azurerm_resource_group
   tenant_id           = data.azurerm_client_config.current.tenant_id

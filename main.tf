@@ -29,6 +29,8 @@ module "sql_database_module" {
   sql_version              = var.sql_version
   administrator_login      = var.administrator_login
   dbname                   = var.dbname
+  tags_sql                 = var.tags_sql
+  key_vault_name           = var.key_vault_name
 
 }
 module "app_service" {
