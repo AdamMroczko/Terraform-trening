@@ -5,7 +5,6 @@ variable "name" {
 # Name of RG
 variable "azurerm_resource_group" {
   description = "The name of the resource group in which the resources will be created."
-
 }
 #Location of RG
 variable "location_resource_group" {
@@ -23,11 +22,9 @@ variable "size_service_plan" {
   type = string
 }
 
-
 variable "my_app_service_name" {
   type = string
 }
-
 variable "dotnet_framework_version" {
   type = string
 }

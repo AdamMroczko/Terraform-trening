@@ -19,18 +19,20 @@ module "sql_database_module" {
   depends_on = [
     module.azure_rg_module
   ]
-  source                   = "./modules/sql_database"
-  storage_name             = var.storage_name
-  location_resource_group  = var.location_resource_group
-  azurerm_resource_group   = var.azurerm_resource_group
-  account_tier             = var.account_tier
-  account_replication_type = var.account_replication_type
-  sql_name                 = var.sql_name
-  sql_version              = var.sql_version
-  administrator_login      = var.administrator_login
-  dbname                   = var.dbname
-  tags_sql                 = var.tags_sql
-  key_vault_name           = var.key_vault_name
+  source                      = "./modules/sql_database"
+  storage_name                = var.storage_name
+  location_resource_group     = var.location_resource_group
+  azurerm_resource_group      = var.azurerm_resource_group
+  account_tier                = var.account_tier
+  account_replication_type    = var.account_replication_type
+  sql_name                    = var.sql_name
+  sql_version                 = var.sql_version
+  administrator_login         = var.administrator_login
+  dbname                      = var.dbname
+  tags_sql                    = var.tags_sql
+  key_vault_name              = var.key_vault_name
+  key_vault_sku_name          = var.key_vault_sku_name
+  key_vault_secret_password        = var.key_vault_secret_password
 
 }
 module "app_service" {

@@ -54,8 +54,8 @@ resource "azurerm_key_vault" "key_vaultsql" {
   location            = var.location_resource_group
   resource_group_name = var.azurerm_resource_group
   tenant_id           = data.azurerm_client_config.current.tenant_id
-  sku_name            = "premium"
-  #soft_delete_retention_days = 7
+  sku_name            = var.key_vault_sku_name
+  
 
   access_policy {
     tenant_id = data.azurerm_client_config.current.tenant_id
@@ -64,6 +64,7 @@ resource "azurerm_key_vault" "key_vaultsql" {
     key_permissions = [
       "create",
       "get",
+      "list"
     ]
 
     secret_permissions = [
@@ -78,7 +79,7 @@ resource "azurerm_key_vault" "key_vaultsql" {
 }
 
 resource "azurerm_key_vault_secret" "key_vaultsql" {
-  name         = "sql-admin"
-  value        = random_password.password-sql.result
-  key_vault_id = azurerm_key_vault.key_vaultsql.id
+  name                    = var.key_vault_secret_password
+  value                   = random_password.password-sql.result
+  key_vault_id            = azurerm_key_vault.key_vaultsql.id
 }

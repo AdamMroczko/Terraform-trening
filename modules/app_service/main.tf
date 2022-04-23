@@ -20,10 +20,6 @@ resource "azurerm_app_service" "app_service" {
     scm_type                 = var.scm_type
   }
 
-  #app_settings = {
-  # "SOME_KEY" = "some-value"
-  #}
-
   connection_string {
     name  = var.dbname
     type  = var.type

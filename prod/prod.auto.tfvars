@@ -30,11 +30,12 @@ my_service_plan_name     = "Myserviceplan-Adam-prod"
 my_app_service_name      = "Myappservice-Adam2022-prod"
 dotnet_framework_version = "v4.0"
 scm_type                 = "LocalGit"
+name                     = "new-app-service-prod"
 
 #Variable SQL server
 sql_name    = "mssqlserver2022-prod"
 sql_version = "12.0"
-name = "new-app-service-prod"
+
 
 #Variable for SQL database
 type   = "SQLServer"
@@ -44,3 +45,5 @@ administrator_login = "mradministratorprod"
 
 # Variable for key vault
 key_vault_name = "myterraformpPRODkey"
+key_vault_sku_name = "standard"
+key_vault_secret_password = "SQLPRODadminpassword" #Password generate by function

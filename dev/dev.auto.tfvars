@@ -30,6 +30,7 @@ my_service_plan_name     = "Myserviceplan-Adam-dev"
 my_app_service_name      = "Myappservice-adam-Adam2022dev"
 dotnet_framework_version = "v4.0"
 scm_type                 = "LocalGit"
+name                     = "new-app-service-dev"
 
 #Variable SQL server
 sql_name    = "mssqlserver-dev-adam2022"
@@ -41,7 +42,7 @@ dbname = "database-adam-dev"
 
 administrator_login = "mradministratordev"
 
-name = "new-app-service-dev"
-
 # Variable for key vault
 key_vault_name = "myterraformDEVkey"
+key_vault_sku_name = "standard"
+key_vault_secret_password = "SQLDEVadminpassword" #Password generate by function
